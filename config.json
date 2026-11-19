@@ -1,0 +1,111 @@
+{
+  "_how_to": "Replace every PASTE_..._HERE value with a real listing URL (see README, step 5). Searches still containing PASTE_ are skipped. Set \"enabled\": false to switch a whole site off.",
+
+  "threshold_percent": 80,
+  "max_plausible_discount": 97,
+  "realert_if_discount_improves_by": 5,
+  "remember_deals_for_days": 45,
+  "health_alerts": true,
+  "health_alert_after_days": 1,
+  "max_runtime_minutes": 11,
+  "default_max_pages": 2,
+
+  "categories": {
+    "padel_rackets": {
+      "label": "Padel racket",
+      "brands": ["Bullpadel", "Babolat", "Head", "Nox", "Adidas", "Wilson", "Siux", "StarVie", "Drop Shot", "Dunlop", "Varlion", "Black Crown"],
+      "require_any": ["padel", "pala", "racket", "racquet", "bat"],
+      "exclude": ["junior", "jr", "kids", "kid", "child", "bag", "backpack", "cover", "grip", "overgrip", "ball", "balls", "shoe", "shoes", "trainers", "protector", "wristband", "headband", "string", "tube", "holder", "cap", "shirt", "shorts", "skirt", "socks", "tennis racket", "squash", "badminton"],
+      "min_rrp": 50
+    },
+    "football_boots": {
+      "label": "Men's football boots",
+      "brands": ["Nike", "Adidas", "Puma", "Mizuno", "New Balance"],
+      "require_any": ["boot", "boots", "fg", "ag", "sg", "mg", "fg/ag", "firm ground", "soft ground", "artificial grass", "football"],
+      "exclude": ["junior", "jnr", "jr", "kids", "kid", "child", "childs", "children", "infant", "infants", "youth", "baby", "boys", "girls", "women", "womens", "women's", "ladies", "socks", "sock", "shin", "shinpads", "laces", "bag", "ball", "jersey", "shirt", "shorts", "gloves", "goalkeeper gloves", "indoor", "futsal", "slides", "sliders"],
+      "min_rrp": 40
+    }
+  },
+
+  "sites": [
+    {
+      "name": "Pro:Direct Soccer",
+      "adapter": "browser",
+      "enabled": true,
+      "searches": [
+        { "category": "football_boots", "url": "PASTE_PRODIRECT_FOOTBALL_BOOTS_SALE_URL_HERE" },
+        { "category": "padel_rackets",  "url": "PASTE_PRODIRECT_PADEL_RACKETS_URL_HERE_OR_DELETE_THIS_LINE" }
+      ]
+    },
+    {
+      "name": "Sports Direct",
+      "adapter": "frasers",
+      "enabled": true,
+      "searches": [
+        { "category": "football_boots", "url": "PASTE_SPORTSDIRECT_MENS_FOOTBALL_BOOTS_URL_HERE" },
+        { "category": "padel_rackets",  "url": "PASTE_SPORTSDIRECT_PADEL_RACKETS_URL_HERE" }
+      ]
+    },
+    {
+      "name": "House of Fraser",
+      "adapter": "frasers",
+      "enabled": true,
+      "searches": [
+        { "category": "football_boots", "url": "PASTE_HOUSEOFFRASER_FOOTBALL_BOOTS_URL_HERE" },
+        { "category": "padel_rackets",  "url": "PASTE_HOUSEOFFRASER_PADEL_RACKETS_URL_HERE" }
+      ]
+    },
+    {
+      "name": "All Things Tennis",
+      "adapter": "shopify",
+      "enabled": true,
+      "searches": [
+        { "category": "padel_rackets", "url": "PASTE_ALLTHINGSTENNIS_PADEL_RACKETS_COLLECTION_URL_HERE" }
+      ]
+    },
+    {
+      "name": "Golf Store UK",
+      "adapter": "shopify",
+      "enabled": true,
+      "searches": [
+        { "category": "padel_rackets", "url": "PASTE_GOLFSTOREUK_PADEL_RACKETS_COLLECTION_URL_HERE" }
+      ]
+    },
+    {
+      "name": "Padel Market",
+      "adapter": "shopify",
+      "enabled": true,
+      "currency": "£",
+      "searches": [
+        { "category": "padel_rackets", "url": "PASTE_PADELMARKET_EN_GB_PADEL_RACKETS_COLLECTION_URL_HERE" }
+      ]
+    },
+    {
+      "name": "Secret Sales",
+      "adapter": "browser",
+      "enabled": true,
+      "searches": [
+        { "category": "football_boots", "url": "PASTE_SECRETSALES_MENS_FOOTBALL_BOOTS_URL_HERE" },
+        { "category": "padel_rackets",  "url": "PASTE_SECRETSALES_PADEL_RACKETS_URL_HERE" }
+      ]
+    },
+    {
+      "name": "MandM Direct",
+      "adapter": "browser",
+      "enabled": true,
+      "searches": [
+        { "category": "football_boots", "url": "PASTE_MANDM_MENS_FOOTBALL_BOOTS_URL_HERE" },
+        { "category": "padel_rackets",  "url": "PASTE_MANDM_PADEL_RACKETS_URL_HERE" }
+      ]
+    },
+    {
+      "name": "eBay UK",
+      "adapter": "ebay",
+      "enabled": true,
+      "searches": [
+        { "category": "football_boots", "url": "PASTE_EBAY_SEARCH_URL_FOR_MENS_FOOTBALL_BOOTS_HERE" },
+        { "category": "padel_rackets",  "url": "PASTE_EBAY_SEARCH_URL_FOR_PADEL_RACKETS_HERE" }
+      ]
+    }
+  ]
+}
